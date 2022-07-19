@@ -4,11 +4,13 @@ import { Routes, Route } from 'react-router-dom';
 import EventCreated from './Components/EventCreated';
 import EventDisplay from './Components/EventDisplay';
 import DisplayAttendees from './Components/DisplayAttendees';
+import HomePage from './Components/HomePage';
 
 function App() {
   return (
     <div className="App">
       <Routes>
+        < Route path ="/" element={<HomePage/>} />
         < Route path="/CreateEvent" element={<CreateEvent/>} />
         < Route path="/EventCreated/:uniqueID" element={<EventCreated />} />
         <Route path="/EventDisplay/:EventID" element={<EventDisplay />} />

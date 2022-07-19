@@ -1,0 +1,80 @@
+.soc_logo {
+    width: 250px;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    justify-content: center;
+    align-content: center;
+    
+  }
+  
+  .home-container {
+    display:flex;
+    justify-content:center; /* horizontally center */
+    align-items:center;    /* vertically center */
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 100px;
+    padding-left: 100px;
+    width: 45%;
+    margin: 0 auto;
+    margin-top: -30px;
+  }
+
+  .home_jpg {
+    margin-top: -80px;
+    padding-left: 100px;
+    float: left;
+  }
+
+  .box {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  
+  .text-style{
+    display:flexbox;
+    margin-top: 100px;
+    margin-right: 130px;
+    background-color: white;
+    text-justify: auto;
+    font-size:40px;
+    text-align: center;
+  }
+
+  .p1 {
+        color:black;
+        font-family: "Lucida Console", "Courier New", monospace;
+
+  }
+  
+  .bold{
+    font-weight: bolder;
+    color: black;
+  }
+
+  .event-create-button {
+    display: inline;
+    clear: both;
+    position:relative;
+    border-radius: 7px;
+    width: 200px;
+    height: 50px;
+    background-color: #756DA2;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    margin-left: 150px;
+    bottom: -22px;
+  }
