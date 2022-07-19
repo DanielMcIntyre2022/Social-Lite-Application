@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { getStorage, ref as sref, uploadBytes } from "firebase/storage";
 import PlacesAutocomplete from 'react-places-autocomplete';
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
+import { useEffect } from "react";
 
 function CreateEvent() {
 
@@ -39,10 +40,10 @@ function CreateEvent() {
     }
     const handleDateChange = (e) => {
         setDateUserInput(e.target.value);
-    } 
-      const handleTimeChange = (e) => {
-          setTimeUserInput(e.target.value);
-    } 
+    }
+    const handleTimeChange = (e) => {
+        setTimeUserInput(e.target.value);
+    }
 
     const handleSelect = async (value) => {
         const results = await geocodeByAddress(value);
@@ -53,17 +54,17 @@ function CreateEvent() {
 
     const handleDetailsChange = (e) => {
         setDetailsUserInput(e.target.value);
-    } 
+    }
     const handleLengthChange = (e) => {
         setLengthUserInput(e.target.value);
-    } 
+    }
     const handleHeaderChange = (e) => {
-              // Create a root reference for storing event photos //
-            setHeaderUserInput(e.target.files[0]);
+        // Create a root reference for storing event photos //
+        setHeaderUserInput(e.target.files[0]);
     }
 
     const handleEmailChange = (e) => {
-        setEmailUserInput(e.target.value); 
+        setEmailUserInput(e.target.value);
     }
 
     const navigate = useNavigate();
@@ -72,33 +73,35 @@ function CreateEvent() {
 
     const writeToDataBase = () => {
         let uuid = uid()
-          if (titleUserInput.length === 0 || dateUserInput.length === 0 || timeUserInput.length === 0 || address.length === 0 || emailUserInput.length === 0) {
-               setError(true);
-          }
+        if (titleUserInput.length === 0 || dateUserInput.length === 0 || timeUserInput.length === 0 || address.length === 0 || emailUserInput.length === 0) {
+            setError(true);
+        }
         if (titleUserInput && dateUserInput && timeUserInput && address && emailUserInput) {
-        const storageRef = sref(storage, uuid);
-        set(ref(db, `/${uuid}`), {
-            EventPhoto: headerUserInput,
-            EventTitle: titleUserInput,
-            EventDate: dateUserInput,
-            EventTime: timeUserInput,
-            EventLength: lengthUserInput,
-            EventLocation: address,
-            EventDetails: detailsUserInput, 
-        });
-        setUserSubmit('');
-        uploadBytes(storageRef, headerUserInput).then(() => {
-            navigate(`/EventCreated/${uuid}`);
-    });
+            const storageRef = sref(storage, uuid);
+            set(ref(db, `/${uuid}`), {
+                EventPhoto: headerUserInput,
+                EventTitle: titleUserInput,
+                EventDate: dateUserInput,
+                EventTime: timeUserInput,
+                EventLength: lengthUserInput,
+                EventLocation: address,
+                EventDetails: detailsUserInput,
+            });
+            setUserSubmit('');
+            uploadBytes(storageRef, headerUserInput).then(() => {
+                navigate(`/EventCreated/${uuid}`);
+            });
+        }
     }
-    }
-    
-    // create a function to send the email //
-    
-    const sendEmail = () => {
-    fetch(`http://127.0.0.1:4000/send-email?recipient=${emailUserInput}`) //query string url
-      .catch(err => console.error(err))
-  }
+
+    // make call to the backend database to send email user input data //
+
+    useEffect(() => {
+        fetch("/api")
+            .then((res) => res.json())
+            .then((emailUserInput) => setEmailUserInput(emailUserInput))
+    }, []);
+   
 
     return (
            <>
@@ -167,7 +170,7 @@ function CreateEvent() {
                         {error && emailUserInput === '' ? <label id="form-validation-label">Event organizer's email must be entered</label> : ""}
             </div>
                 <div className="create-event-btn-container">
-                        <button className="event-create-button" type="button" value={userSubmit} onClick={writeToDataBase} onSubmit={sendEmail}>Create Event</button>
+                        <button className="event-create-button" type="button" value={userSubmit} onClick={writeToDataBase}>Create Event</button>
                 </div>
         </form>  
     </div>
