@@ -1,0 +1,260 @@
+.event-creation-container {
+  background-color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 100px;
+  padding-left: 100px;
+  width: 45%;
+  margin: 0 auto;
+  margin-top: -30px;
+  height: auto;
+}
+
+.create-event-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.event-creation-container button {
+  border-radius: 7px;
+  width: 200px;
+  height: 40px;
+  background-color: #756DA2;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.event-creation-container h1 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 4px solid black;
+  width: 70%;
+  margin-top: -20px;
+}
+
+.header-container img {
+  height: 100px;
+  margin-top: 15px;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  padding: 10px;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input {
+  border-radius: 5px;
+}
+
+input:focus {
+  border: 3px solid black;
+}
+
+#EventDetails {
+  height: 50px;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+
+span {
+  color: red;
+}
+
+.event-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-time-length {
+  display: flex;
+  column-gap: 3.1%;
+  flex-wrap: wrap;
+}
+
+#EventLocation {
+  width: 97%;
+}
+
+.location-suggestions {
+  border: 1px solid lightgray;
+}
+
+#EventTitle, #EventDate, #EventTime, #EventLength, #EventDetails, #EventLocation, #EventEmail {
+  border: black 1.5px solid;
+}
+
+#EventEmail {
+  margin-top: -20px;
+  width: 97%;
+}
+
+.event-name-container label{
+  font-size: 1.2rem;
+  padding-bottom: 2px;
+}
+
+.date-input-container label {
+  font-size: 1.1rem;
+  padding-bottom: 2px;
+}
+
+.time-input-container label {
+  font-size: 1.1rem;
+  padding-bottom: 2px;
+}
+
+.length-input-container label {
+  font-size: 1.1rem;
+  padding-bottom: 2px;
+}
+
+.location-input-container label {
+  font-size: 1.1rem;
+  padding-bottom: 2px;
+}
+
+.details-input-container label {
+  font-size: 1.1rem;
+  padding-bottom: 2px;
+}
+
+.orangizer-email-container label {
+    font-size: 1.1rem;
+    padding-bottom: 2px;
+}
+
+.time-input-container input {
+  width: 178px;
+}
+
+.date-input-container input {
+  width: 178px;
+}
+
+.length-input-container input {
+  width: 178px;
+}
+
+.orangizer-email-container p {
+  margin-top: 1px;
+  color: #A9A9A9;
+}
+
+.header-input-container input {
+  cursor: pointer;
+}
+
+.upload-image-flex-container {
+  display: flex;
+}
+
+.upload-input {
+  color: white;
+}
+
+.location-input {
+  width: 500px;
+}
+
+#form-validation-label {
+  color: red;
+  font-size: 1rem;
+}
+
+@media (max-width: 1435px) {
+  #EventDate, #EventTime, #EventLength {
+    display: block;
+    flex-wrap: nowrap;
+    width: auto;
+  }
+}
+
+@media(max-width:1160px) {
+  .orangizer-email-container {
+      margin-top: 20px;
+    }
+}
+
+@media(max-width:1200px) {
+  .event-creation-container h1 {
+    width: 100% !important;
+  }
+}
+
+@media(max-width: 1010px) {
+  .date-time-length {
+    display: block;
+  }
+}
+
+@media(max-width: 700px) {
+  .event-creation-container h1 {
+    width: 130% !important;
+    margin-left: -15%;
+  }
+  .event-name-container {
+    width: 130% !important;
+    margin-left: -15%;
+  }
+  .location-input-container {
+    width: 130% !important;
+    margin-left: -15%;
+  }
+  .details-input-container {
+    width: 135% !important;
+    margin-left: -15%;
+  }
+  .orangizer-email-container {
+    width: 130% !important;
+    margin-left: -15%;
+  }
+  .date-time-length {
+    width: 130% !important;
+    margin-left: -15%;
+  }
+}
+
+
+@media(max-width: 506px) {
+  .event-creation-container h1 {
+    width: 150% !important;
+    margin-left: -25%;
+  }
+}
+
+@media(max-width: 530px) {
+  .event-creation-container h1 {
+    width: 160% !important;
+    margin-left: -32%;
+    font-size: 1.75rem;
+  }
+}
+
+
+
+
+

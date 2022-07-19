@@ -1,0 +1,116 @@
+.event-display-container {
+    background-color: white;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-right: 100px;
+        padding-left: 100px;
+        width: 55%;
+        margin: 0 auto;
+        height: auto;
+        margin-top: -80px;
+}
+
+.event-display-container h1 {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        text-align: center;
+        border-top: 2px solid black;
+        border-right: 2px solid black;
+        border-left: 2px solid black;
+        border-bottom: 4px solid black;
+}
+
+.event-image-container img {
+    height: 35vh;
+    border-radius: 10px;
+    width: 165%;
+    margin-left: -35%;
+    object-fit: cover;
+}
+
+.event-date-time-duration {
+    display: flex;
+    justify-content: center;
+    column-gap: 25%;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    margin-left: -10%;
+}
+
+.event-details-container {
+    font-size: 1.3rem;
+}
+
+.rsvp-button {
+    display: flex;
+    justify-content: center;
+}
+
+.rsvp-button button {
+    background-color: #756DA2;
+    color: white;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.event-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.event-title-container {
+    width: 60%;
+    margin-top: 15px;
+    margin-left: 5%;
+}
+
+.event-title-and-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-details-text-container {
+    border: 1px solid #B8B8B8;
+    height: 80px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+.event-location-container {
+    font-size: 1.3rem;
+}
+
+.rvsp-input-area  {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+ul.EventDisplay {
+    padding: 0;
+}
+
+#event-map {
+    height: 300px;
+    width: 100%;
+}
+#rsvp-input {
+    width: 500px;
+}
+
+#attendees-header {
+    font-size: 2rem;
+    border: none;
+}

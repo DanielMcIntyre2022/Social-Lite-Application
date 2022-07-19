@@ -1,0 +1,85 @@
+.event-created-header {
+    text-align: center;
+}
+
+.event-created-container {
+    background-color: #e6dfeb;
+    height: auto;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    padding-bottom: 40px;
+}
+
+ul.EventData {
+    padding: 0;
+}
+
+.event-created-container p {
+    text-align: center;
+}
+
+.event-created-header a {
+    color:#654fa8;
+    font-size: 24px;
+}
+
+#copy-link-container a {
+    color:#654fa8;
+    text-decoration: none;
+}
+
+.event-created-header h1 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 30%;
+    margin-top: 50px;
+}
+
+#copy-link-container {
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #654fa8;
+    border-bottom: 5px solid #756DA2;
+    width: 120%;
+    margin-left: -15%;
+}
+
+.copy-link-button-container {
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.copy-link-button {
+    background-color: #756DA2;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 200px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.copy-link-button button {
+    font-weight: 700;
+    font-size: 24px;
+}
