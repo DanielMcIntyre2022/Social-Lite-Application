@@ -42,7 +42,7 @@ sgMail
   }
 })();
 
-app.get("/api", (req, res) => {
+app.get("/sendmail", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
 

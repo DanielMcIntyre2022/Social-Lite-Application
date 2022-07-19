@@ -9,6 +9,7 @@ import { getStorage, ref as sref, uploadBytes } from "firebase/storage";
 import PlacesAutocomplete from 'react-places-autocomplete';
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 import { useEffect } from "react";
+import axios from 'axios';
 
 function CreateEvent() {
 
@@ -96,13 +97,21 @@ function CreateEvent() {
 
     // make call to the backend database to send email user input data //
 
-    useEffect(() => {
-        fetch("/api")
-            .then((res) => res.json())
-            .then((emailUserInput) => setEmailUserInput(emailUserInput))
-    }, []);
-   
+    const url = 'http://localhost:4000/'
 
+    useEffect(() => {
+        getEmailInput();
+    }, []);
+
+    const getEmailInput = () => {
+        axios.get(`${url}sendmail`)
+            .then((response) => {
+                const email = response.data.emailUserInput;
+                setEmailUserInput(email);
+            })
+        .catch(error => console.log(`Error: ${error}`))
+    }
+   
     return (
            <>
             < Header />
