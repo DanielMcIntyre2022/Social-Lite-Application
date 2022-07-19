@@ -1,12 +1,9 @@
-
 const express = require('express'); //needed to launch server
 const cors = require('cors'); //needed to disable sendgrid security
-
 const app = express(); //alias from the express function
-
-
 app.use(cors);
 
+// sendgrid details //
 
 require('dotenv').config();
 const sgMail = require('@sendgrid/mail');
@@ -19,6 +16,8 @@ const msg = {
   text: 'and easy to do anywhere, even with Node.js',
   html: '<strong>and easy to do anywhere, even with Node.js</strong>',
 };
+
+// email sending logic //
 
 //ES6
 sgMail
@@ -43,6 +42,10 @@ sgMail
   }
 })();
 
-    // to access server run 'nodemon index.js' then click here: http://localhost:5000/
-    app.listen(4000, () => console.log("Running on Port 4000"));
+app.get("/api", (req, res) => {
+  res.json({ message: "Hello from server!" });
+});
+
+
+app.listen(4000,  () => console.log("Running on Port 4000!"));
 
