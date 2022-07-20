@@ -12,9 +12,9 @@ const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello World');
 
-  server.post("/", (req, res) => {
+  app.post("/", (req, res) => {
     const emailInfo = req.body.emailUserInput;
-  
+    console.log(emailInfo);
 // sendgrid details //
 
 require('dotenv').config();

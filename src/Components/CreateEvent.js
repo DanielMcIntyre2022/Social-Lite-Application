@@ -99,7 +99,9 @@ function CreateEvent() {
     const url = 'https://localhost:4000';
 
     const getEmailInput = () => {
-        axios.post(url, { body: { emailUserInput } })
+        axios.post(url, {emailUserInput}).then((res) => {
+            console.log(res);
+        }).catch(console.log('error'));
     }
    
     return (
@@ -107,7 +109,7 @@ function CreateEvent() {
             < Header />
     <div className="event-creation-container">
             <h1>Create a New Event</h1>
-                <form>
+                <form onSubmit={getEmailInput}>
             <div className="event-name-container event-input">
         <label for="eventTitle">Name of Event<span>*</span></label>
                         <input type="text" id="EventTitle" value={titleUserInput} onChange={handleTitleChange} /> 
@@ -169,7 +171,7 @@ function CreateEvent() {
                         {error && emailUserInput === '' ? <label id="form-validation-label">Event organizer's email must be entered</label> : ""}
             </div>
                 <div className="create-event-btn-container">
-                        <button className="event-create-button" type="button" value={userSubmit} onClick={writeToDataBase} onSubmit={getEmailInput}>Create Event</button>
+                        <button className="event-create-button" type="button" value={userSubmit} onClick={writeToDataBase}>Create Event</button>
                 </div>
         </form>  
     </div>
