@@ -69,6 +69,17 @@ function CreateEvent() {
 
     const navigate = useNavigate();
 
+       // make call to the backend database to send email user input data //
+
+    const url = 'http://127.0.0.1:4000/';
+
+    const getEmailInput = e => {
+        e.preventDefault();
+        axios.post(url, {emailUserInput}).then((res) => {
+            console.log(res);
+        }).catch(console.log('error'));
+    }
+
     // submit user data to database with unique ID for each event //
 
     const writeToDataBase = () => {
@@ -87,23 +98,14 @@ function CreateEvent() {
                 EventLocation: address,
                 EventDetails: detailsUserInput,
             });
+            getEmailInput('');
             setUserSubmit('');
             uploadBytes(storageRef, headerUserInput).then(() => {
                 navigate(`/EventCreated/${uuid}`);
             });
         }
     }
-
-    // make call to the backend database to send email user input data //
-
-    const url = 'https://localhost:4000';
-
-    const getEmailInput = () => {
-        axios.post(url, {emailUserInput}).then((res) => {
-            console.log(res);
-        }).catch(console.log('error'));
-    }
-   
+  
     return (
            <>
             < Header />
