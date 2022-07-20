@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 import { getStorage, ref as sref, uploadBytes } from "firebase/storage";
 import PlacesAutocomplete from 'react-places-autocomplete';
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
-import { useEffect } from "react";
 import axios from 'axios';
 
 function CreateEvent() {
@@ -97,20 +96,10 @@ function CreateEvent() {
 
     // make call to the backend database to send email user input data //
 
-    const url = 'https://localhost:4000'
-
-    useEffect(() => {
-        getEmailInput();
-    }, []);
+    const url = 'https://localhost:4000';
 
     const getEmailInput = () => {
-        axios.post(url)
-            .then((response) => {
-                console.log(response);
-                const email = response.emailUserInput;
-                setEmailUserInput(email);
-            })
-        .catch(error => console.log(`Error: ${error}`))
+        axios.post(url, { body: { emailUserInput } })
     }
    
     return (
