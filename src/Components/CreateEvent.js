@@ -97,7 +97,7 @@ function CreateEvent() {
 
     // make call to the backend database to send email user input data //
 
-    const url = 'http://localhost:4000'
+    const url = 'https://localhost:4000'
 
     useEffect(() => {
         getEmailInput();
@@ -106,6 +106,7 @@ function CreateEvent() {
     const getEmailInput = () => {
         axios.post(url)
             .then((response) => {
+                console.log(response);
                 const email = response.emailUserInput;
                 setEmailUserInput(email);
             })
@@ -117,7 +118,7 @@ function CreateEvent() {
             < Header />
     <div className="event-creation-container">
             <h1>Create a New Event</h1>
-                <form action="http://localhost:4000" method="POST">
+                <form>
             <div className="event-name-container event-input">
         <label for="eventTitle">Name of Event<span>*</span></label>
                         <input type="text" id="EventTitle" value={titleUserInput} onChange={handleTitleChange} /> 
@@ -179,7 +180,7 @@ function CreateEvent() {
                         {error && emailUserInput === '' ? <label id="form-validation-label">Event organizer's email must be entered</label> : ""}
             </div>
                 <div className="create-event-btn-container">
-                        <button className="event-create-button" type="button" value={userSubmit} onClick={writeToDataBase}>Create Event</button>
+                        <button className="event-create-button" type="button" value={userSubmit} onClick={writeToDataBase} onSubmit={getEmailInput}>Create Event</button>
                 </div>
         </form>  
     </div>
