@@ -111,7 +111,7 @@ function CreateEvent() {
             < Header />
     <div className="event-creation-container">
             <h1>Create a New Event</h1>
-                <form onSubmit={getEmailInput}>
+                <form>
             <div className="event-name-container event-input">
         <label for="eventTitle">Name of Event<span>*</span></label>
                         <input type="text" id="EventTitle" value={titleUserInput} onChange={handleTitleChange} /> 
