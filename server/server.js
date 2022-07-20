@@ -2,11 +2,28 @@ const express = require('express'); //needed to launch server
 const cors = require('cors'); //needed to disable sendgrid security
 const app = express(); //alias from the express function
 app.use(cors);
+const axios = require('axios');
+
+// make a get request to retive the email user data // 
+
+app.get("/", (req, res) => {
+
+  const config = {
+    method: 'GET',
+    url: 'http://localhost:4000'
+  };
+  axios(config)
+    .then((response) => {
+      res.json(response.data);
+      console.log(response.data);
+  })
+});
 
 // sendgrid details //
 
 require('dotenv').config();
 const sgMail = require('@sendgrid/mail');
+const { config } = require('dotenv');
 const apikey = process.env.SENDGRID_API_KEY
 sgMail.setApiKey(apikey);
 const msg = {
@@ -42,10 +59,5 @@ sgMail
   }
 })();
 
-app.get("/sendmail", (req, res) => {
-  res.json({ message: "Hello from server!" });
-});
-
-
-app.listen(4000,  () => console.log("Running on Port 4000!"));
+app.listen(4000,  () => console.log("koki"));
 
