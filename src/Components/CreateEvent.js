@@ -91,9 +91,8 @@ function CreateEvent() {
                 EventLocation: address,
                 EventDetails: detailsUserInput,
             });
-            const eventLink = `/EventCreated/${uuid}`
             const getEmailInput = () => {
-        axios.post(serverUrl, {emailUserInput, eventLink}).then((res) => {
+        axios.post(serverUrl, emailUserInput).then((res) => {
             console.log(res);
         }).catch(console.log('error'));
         }

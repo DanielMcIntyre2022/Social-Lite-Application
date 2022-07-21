@@ -14,8 +14,8 @@ var corsOptions = {
 app.post("/", cors(corsOptions), (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   const emailInfo = req.body.emailUserInput;
-  const eventLinkInfo = req.body.eventLink;
   console.log(emailInfo);
+  res.json(emailInfo);
 
   // sendgrid details //
 
@@ -27,7 +27,7 @@ app.post("/", cors(corsOptions), (req, res) => {
     to: emailInfo,
     from: "daniel-mcintyre@hotmail.com",
     subject: "Congratulations! Your event link has been created!",
-    text: `Here is your event link: ${eventLinkInfo}`,
+    text: `Here is your event link:`,
     html: "<strong>and easy to do anywhere, even with Node.js</strong>",
   };
 
