@@ -1,6 +1,7 @@
 const express = require("express"); //needed to launch server
 const cors = require("cors"); //needed to disable sendgrid security
 const app = express(); //alias from the express function
+app.use(cors());
 
 const hostname = "127.0.0.1";
 const port = 4000;
@@ -11,10 +12,10 @@ var corsOptions = {
 }
 
 app.post("/", cors(corsOptions), (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
   const emailInfo = req.body.emailUserInput;
-  const eventLinkInfo = req.body.eventLink
+  const eventLinkInfo = req.body.eventLink;
   console.log(emailInfo);
-  res.json(emailInfo);
 
   // sendgrid details //
 
