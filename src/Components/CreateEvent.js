@@ -71,10 +71,9 @@ function CreateEvent() {
 
        // make call to the backend database to send email user input data //
 
-    const url = 'http://127.0.0.1:4000/';
+    const url = 'http://localhost:4000';
 
-    const getEmailInput = e => {
-        e.preventDefault();
+    const getEmailInput = () => {
         axios.post(url, {emailUserInput}).then((res) => {
             console.log(res);
         }).catch(console.log('error'));
