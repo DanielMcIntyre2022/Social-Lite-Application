@@ -71,13 +71,7 @@ function CreateEvent() {
 
        // make call to the backend database to send email user input data //
 
-    const url = 'http://localhost:4000';
-
-    const getEmailInput = () => {
-        axios.post(url, {emailUserInput}).then((res) => {
-            console.log(res);
-        }).catch(console.log('error'));
-    }
+    const serverUrl = 'http://localhost:4000';
 
     // submit user data to database with unique ID for each event //
 
@@ -97,6 +91,12 @@ function CreateEvent() {
                 EventLocation: address,
                 EventDetails: detailsUserInput,
             });
+            const eventLink = `/EventCreated/${uuid}`
+            const getEmailInput = () => {
+        axios.post(serverUrl, {emailUserInput, eventLink}).then((res) => {
+            console.log(res);
+        }).catch(console.log('error'));
+        }
             getEmailInput('');
             setUserSubmit('');
             uploadBytes(storageRef, headerUserInput).then(() => {

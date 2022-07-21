@@ -7,11 +7,12 @@ const port = 4000;
 
 var corsOptions = {
   origin: 'http://localhost:3000',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  optionsSuccessStatus: 200 
 }
 
 app.post("/", cors(corsOptions), (req, res) => {
   const emailInfo = req.body.emailUserInput;
+  const eventLinkInfo = req.body.eventLink
   console.log(emailInfo);
   res.json(emailInfo);
 
@@ -24,8 +25,8 @@ app.post("/", cors(corsOptions), (req, res) => {
   const msg = {
     to: emailInfo,
     from: "daniel-mcintyre@hotmail.com",
-    subject: "Sending with Twilio SendGrid is Fun",
-    text: "and easy to do anywhere, even with Node.js",
+    subject: "Congratulations! Your event link has been created!",
+    text: `Here is your event link: ${eventLinkInfo}`,
     html: "<strong>and easy to do anywhere, even with Node.js</strong>",
   };
 
