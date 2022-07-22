@@ -3,7 +3,11 @@ const cors = require("cors"); //needed to disable sendgrid security
 const app = express(); //alias from the express function
 app.use(cors());
 app.use(express.json())
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({ extended: true }))
+const sgMail = require("@sendgrid/mail");
+require("dotenv").config();
+const apikey = process.env.SENDGRID_API_KEY;
+sgMail.setApiKey(apikey);
 
 const hostname = "127.0.0.1";
 const port = 4000;
@@ -15,16 +19,13 @@ var corsOptions = {
 
 app.post("/", cors(corsOptions), (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
-  const emailInfo = JSON.stringify(req.body.email);
-  res.send(JSON.stringify(req.body.email))
-  console.log(emailInfo);
+  const emailInfo = req.body.email;
+  res.send(req.body.email);
+
+  console.log(emailInfo, 'hello');
 
   // sendgrid details //
 
-  require("dotenv").config();
-  const sgMail = require("@sendgrid/mail");
-  const apikey = process.env.SENDGRID_API_KEY;
-  sgMail.setApiKey(apikey);
   const msg = {
     to: emailInfo,
     from: "socialliteeventservices@gmail.com",
@@ -32,21 +33,10 @@ app.post("/", cors(corsOptions), (req, res) => {
     text: `Here is your event link:`,
     html: "<strong>and easy to do anywhere, even with Node.js</strong>",
   };
-
-  // email sending logic //
-
-  //ES8
-  (async () => {
-    try {
-      await sgMail.send(msg);
-    } catch (error) {
-      console.error(error);
-
-      if (error.response) {
-        console.error(error.response.body);
-      }
-    }
-  })();
+  
+  sgMail.send(msg).then(() => {
+    console.log("mail sent!")
+  });
 });
 
 app.listen(port, hostname, () => {
