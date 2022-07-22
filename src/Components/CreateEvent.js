@@ -92,8 +92,11 @@ function CreateEvent() {
                 EventDetails: detailsUserInput,
             });
             const getEmailInput = () => {
-        axios.post(serverUrl, emailUserInput).then((res) => {
-            console.log(res);
+                axios.post(serverUrl, { email: emailUserInput }, {
+                    headers: {"Content-Type": "application/json",
+                },
+        }).then((res) => {
+        console.log(res);
         }).catch(console.log('error'));
         }
             getEmailInput('');

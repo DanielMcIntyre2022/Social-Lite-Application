@@ -15,9 +15,9 @@ var corsOptions = {
 
 app.post("/", cors(corsOptions), (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
-  const emailInfo = req.body;
+  const emailInfo = JSON.stringify(req.body.email);
+  res.send(JSON.stringify(req.body.email))
   console.log(emailInfo);
-  res.json(emailInfo);
 
   // sendgrid details //
 
@@ -27,7 +27,7 @@ app.post("/", cors(corsOptions), (req, res) => {
   sgMail.setApiKey(apikey);
   const msg = {
     to: emailInfo,
-    from: "daniel-mcintyre@hotmail.com",
+    from: "socialliteeventservices@gmail.com",
     subject: "Congratulations! Your event link has been created!",
     text: `Here is your event link:`,
     html: "<strong>and easy to do anywhere, even with Node.js</strong>",
