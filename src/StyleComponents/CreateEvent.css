@@ -2,9 +2,7 @@
   background-color: white;
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-right: 100px;
-  padding-left: 100px;
-  width: 45%;
+  width: min(80%, 650px);
   margin: 0 auto;
   margin-top: -30px;
   height: auto;
@@ -91,12 +89,13 @@ span {
 
 .date-time-length {
   display: flex;
-  column-gap: 3.1%;
+  width: 100%;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #EventLocation {
-  width: 97%;
+  width: calc(100% - 20px)
 }
 
 .location-suggestions {
@@ -109,7 +108,7 @@ span {
 
 #EventEmail {
   margin-top: -20px;
-  width: 97%;
+  width:calc(100% - 20px)
 }
 
 .event-name-container label{
@@ -147,17 +146,19 @@ span {
     padding-bottom: 2px;
 }
 
-.time-input-container input {
-  width: 178px;
+
+.time-input-container {
+  width: 30%;
 }
 
-.date-input-container input {
-  width: 178px;
+.date-input-container {
+  width: 30%;
 }
 
-.length-input-container input {
-  width: 178px;
+.length-input-container {
+  width: 30%;
 }
+
 
 .orangizer-email-container p {
   margin-top: 1px;
@@ -192,69 +193,3 @@ span {
     width: auto;
   }
 }
-/* 
-@media(max-width:1160px) {
-  .orangizer-email-container {
-      margin-top: 20px;
-    }
-}
-
-@media(max-width:1200px) {
-  .event-creation-container h1 {
-    width: 100% !important;
-  }
-}
-
-@media(max-width: 1010px) {
-  .date-time-length {
-    display: block;
-  }
-}
-
-@media(max-width: 700px) {
-  .event-creation-container h1 {
-    width: 130% !important;
-    margin-left: -15%;
-  }
-  .event-name-container {
-    width: 130% !important;
-    margin-left: -15%;
-  }
-  .location-input-container {
-    width: 130% !important;
-    margin-left: -15%;
-  }
-  .details-input-container {
-    width: 135% !important;
-    margin-left: -15%;
-  }
-  .orangizer-email-container {
-    width: 130% !important;
-    margin-left: -15%;
-  }
-  .date-time-length {
-    width: 130% !important;
-    margin-left: -15%;
-  }
-}
-
-
-@media(max-width: 506px) {
-  .event-creation-container h1 {
-    width: 150% !important;
-    margin-left: -25%;
-  }
-}
-
-@media(max-width: 530px) {
-  .event-creation-container h1 {
-    width: 160% !important;
-    margin-left: -32%;
-    font-size: 1.75rem;
-  }
-}
-
- */
-
-
-
