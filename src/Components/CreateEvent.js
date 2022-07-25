@@ -71,7 +71,7 @@ function CreateEvent() {
 
        // make call to the backend database to send email user input data //
 
-    const serverUrl = 'http://localhost:4000';
+    const serverUrl = 'https://social-ite.herokuapp.com/';
 
     // submit user data to database with unique ID for each event //
 
@@ -92,7 +92,7 @@ function CreateEvent() {
                 EventDetails: detailsUserInput,
             });
             const getEmailInput = () => {
-                axios.post(serverUrl, { email: emailUserInput, eventLink:`localhost:3000/EventDisplay/${uuid}`}, {
+                axios.post(serverUrl, { email: emailUserInput, eventLink:`https://soicalite.netlify.app/EventDisplay/${uuid}`}, {
                     headers: {"Content-Type": "application/json",
                 },
         }).then((res) => {

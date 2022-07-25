@@ -13,7 +13,7 @@ const hostname = "127.0.0.1";
 const port = 4000;
 
 var corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: 'https://soicalite.netlify.app',
   optionsSuccessStatus: 200 
 }
 
