@@ -40,6 +40,6 @@ app.post("/", cors(corsOptions), (req, res) => {
   });
 });
 
-app.listen(port, hostname, () => {
+app.listen(port, hostname || process.env.PORT, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
