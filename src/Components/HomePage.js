@@ -26,7 +26,7 @@ function HomePage() {
         <span><p1>your friends!</p1></span>
       </div>
       <div className='box'>
-          <button className="event-create-button" type="button" onClick={navigateCreateEvent}>Create an Event</button>
+          <button className="home-page-button" type="button" onClick={navigateCreateEvent}>Create an Event</button>
 
           <Routes>
           <Route path="/CreateEvent" />
