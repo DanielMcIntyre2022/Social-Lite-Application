@@ -8,7 +8,6 @@
   "client": "npm start --prefix client",
   "dev": "concurrently \"nodemon server\" \"npm run client\""
 },
- "proxy": "http://localhost:4000",
   "keywords": [],
   "author": "",
   "license": "ISC",
