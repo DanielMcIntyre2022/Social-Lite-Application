@@ -9,8 +9,7 @@ require("dotenv").config();
 const apikey = process.env.SENDGRID_API_KEY;
 sgMail.setApiKey(apikey);
 
-const hostname = "127.0.0.1";
-const port = 4000;
+const PORT = process.env.PORT;
 
 var corsOptions = {
   origin: 'https://soicalite.netlify.app',
@@ -23,9 +22,6 @@ app.post("/", cors(corsOptions), (req, res) => {
   const eventInfo = req.body.eventLink;
   res.send(req.body.email);
 
-  console.log(emailInfo, 'hello');
-  console.log(eventInfo);
-
   // sendgrid details //
 
   const msg = {
@@ -36,10 +32,9 @@ app.post("/", cors(corsOptions), (req, res) => {
   };
   
   sgMail.send(msg).then(() => {
-    console.log("mail sent!")
   });
 });
 
-app.listen(port, hostname || process.env.HOST, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.listen(PORT, () => {
+  
 });

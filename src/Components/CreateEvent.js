@@ -71,7 +71,7 @@ function CreateEvent() {
 
        // make call to the backend database to send email user input data //
 
-    const serverUrl = 'https://social-ite.herokuapp.com/';
+    const serverUrl = 'https://social-lite-production.herokuapp.com/';
 
     // submit user data to database with unique ID for each event //
 
