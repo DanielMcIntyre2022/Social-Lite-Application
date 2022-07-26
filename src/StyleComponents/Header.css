@@ -1,114 +1,13 @@
-$desktop : 1200px;
-$laptop : 992px;
-$tablet : 768px;
-$phone : 480px;
 
+.header-container {
+  background-color: white;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-top: -20px;
 
-.full-body {
-  
-  @media screen(max-width(42em)) {
-    .soc_logo{
-      width: 100% ;
-      display: flex;
-    }
-    .event-create-button{
-      display:flex;
-      left: -10px;
-      width: 100%;
-      min-width: 50px;
-      max-width: 300px;
-      align-content:center;
-      font-size: 1rem;
-    }
-    .text-style{
-      display: flex;
-      flex-direction: row;
-      flex-wrap:nowrap;
-      width:100%;
-
-    }
-    .bold,.normal{
-      width: 100% ;
-      display: grid;
-      align-content: center;
-    }
-  }
 }
-.soc_logo {
-    width: 250px;
-    height: 120px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    justify-content: center;
-    align-content: center;
-    
-  }
-  
-  .home-container {
-    padding-top: 60px;
-    padding-bottom: 50px;
-    padding-right: 100px;
-    padding-left: 100px;
-    display:flex;
-    justify-content:center; /* horizontally center */
-    align-items:center;    /* vertically center */
-    background-color: white;
-    width: 45%;
-    margin: 0 auto;
-    margin-top: -40px;
-  }
-
-  .home_jpg {
-    margin-top: -60px;
-    padding-left: 100px;
-    float: left;
-    max-width: 100%;
-  }
-
-  .box {
-    display: flex;
-    align-items: center;
-  }
-
-  
-  .text-style{
-    display:flexbox;
-    margin-top: 100px;
-    margin-right: 130px;
-    text-justify: auto;
-    font-size:40px;
-    text-align: center;
-  }
-
-  .normal{
-    font-weight: 100;
-    color: black;
-  }
-  .bold{
-    font-weight: bolder;
-    color: black;
-  }
-
-  .event-create-button {
-    display: inline;
-    align-self: start;
-    clear: both;
-    position:relative;
-    border-radius: 7px;
-    width: 200px;
-    height: 50px;
-    background-color: #756DA2;
-    font-weight: bold;
-    color: white;
-    border: 0 none;
-    border-radius: 1px;
-    cursor: pointer;
-    padding-top: 15px;
-    padding-bottom: 20px;
-    margin-top: 10px;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    margin-left: 170px;
-    bottom: -22px;
-  }
