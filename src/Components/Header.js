@@ -7,7 +7,7 @@ function Header() {
     const Navigate = useNavigate(); 
 
     const returnHome = () => {
-        Navigate('/CreateEvent')
+        Navigate('/')
     }
 
     return (
