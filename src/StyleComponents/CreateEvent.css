@@ -202,10 +202,12 @@ span {
 
 input[type=date] {
   background-color: white;
+  -webkit-appearance: none;
 }
 
 input[type=time] {
   background-color: white;
+  -webkit-appearance: none;
 }
 
 input {
