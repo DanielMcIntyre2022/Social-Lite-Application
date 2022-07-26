@@ -116,7 +116,7 @@ function EventDisplay() {
                 </div>
                 <div className="event-location-container">
                   <p>
-                    <b>Location: {eventdata[1].EventLocation}</b>
+                    <b>Location:</b> {eventdata[1].EventLocation}
                   </p>
                   <iframe
                     id="event-map"
