@@ -2,9 +2,7 @@
     background-color: white;
         padding-top: 50px;
         padding-bottom: 50px;
-        padding-right: 100px;
-        padding-left: 100px;
-        width: 55%;
+        width: min(90%, 800px);
         margin: 0 auto;
         height: auto;
         margin-top: -80px;
