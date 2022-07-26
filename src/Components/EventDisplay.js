@@ -100,7 +100,7 @@ function EventDisplay() {
 
                       <p>
                         <div className="event-text">
-                          <b>Time:</b>{" "}
+                          <b>Time:</b>
                         </div>
                         {eventdata[1].EventTime}
                       </p>

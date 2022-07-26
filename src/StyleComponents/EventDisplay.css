@@ -30,11 +30,14 @@
 
 .event-date-time-duration {
     display: flex;
-    column-gap: 25%;
+    width: 100%;
+    column-gap: 20%;
     margin-top: 10px;
     font-size: 1.3rem;
-    margin-left: -10%;
+    margin-left: -80px;
 }
+
+
 
 .event-details-container {
     font-size: 1.3rem;
