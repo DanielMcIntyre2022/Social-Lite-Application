@@ -103,7 +103,7 @@ span {
 }
 
 #EventTitle, #EventDate, #EventTime, #EventLength, #EventDetails, #EventLocation, #EventEmail {
-  border: black 1.5px solid;
+  border: #869296 2px solid;
 }
 
 #EventEmail {
