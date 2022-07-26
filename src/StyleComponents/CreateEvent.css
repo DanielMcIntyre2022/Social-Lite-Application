@@ -197,18 +197,19 @@ span {
 input[type=date] {
   background-color: white;
   -webkit-appearance: none;
+  font-size: 0.8rem;
 }
 
 input[type=time] {
   background-color: white;
   -webkit-appearance: none;
   height: 20px;
+  font-size: 0.8rem;
 }
 
 input {
   -webkit-appearance: none;
   height: 20px;
-  font-size: 0.8rem;
 }
 
 @media(max-width:695px) {
