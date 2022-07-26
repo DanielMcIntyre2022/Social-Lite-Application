@@ -105,5 +105,6 @@
   }
   .home-button-container button {
     font-size: 0.9rem;
+    margin-top: 15px;
   }
 }
