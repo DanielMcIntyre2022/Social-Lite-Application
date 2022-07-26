@@ -1,38 +1,34 @@
-import React from 'react'
-import logo from '../images/Logo.jpg'
-import Social from '../images/Socialite-Landing-Main.jpg'
-import "../StyleComponents/HomePage.css"
+import React from 'react';
+import Social from '../assets/Socialite-Landing-Main.jpg';
+import "../StyleComponents/HomePage.css";
 import { Routes, Route, useNavigate } from 'react-router-dom';
+import Header from '../Components/Header'
 
 function HomePage() {
 
-  
   const navigate = useNavigate();
   const navigateCreateEvent = () => {
     navigate('/CreateEvent');
   };
-  return (
-    <div>
-    <div className='home-container'>
-    
-    <img className='soc_logo' src={logo} alt="Socialite logo"/>
-    </div>
-    <img className='home_jpg' src={Social} alt="Friends Main" />
-      
-      <div className='text-style'>
-     
-        <span><p1>Easily</p1><p2 className="bold"> create, view & </p2></span><br/>
-        <span><p2 className="bold"> share </p2> <p1> events with</p1></span><br/>
-        <span><p1>your friends!</p1></span>
-      </div>
-      <div className='box'>
-          <button className="home-page-button" type="button" onClick={navigateCreateEvent}>Create an Event</button>
 
+  return (
+    <>
+      < Header />
+      <div className='home-page-container'>
+    <img className='home_jpg' src={Social} alt="Friends Main" />
+        <div className='home-box-container'>
+          <div className="home-text-container">
+            <p>Easily <b>create, view and share</b> events with your friends!</p>
+          </div>
+          <div className="home-button-container">   
+            <button className="home-page-button" type="button" onClick={navigateCreateEvent}>Create an Event</button>
+        </div>     
           <Routes>
           <Route path="/CreateEvent" />
         </Routes>
         </div>
-    </div>
+      </div>
+    </>
   )
 }
 
