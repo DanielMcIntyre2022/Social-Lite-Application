@@ -76,3 +76,30 @@
     margin-left: 25% !important;
   }
 }
+
+@media(max-width:1020px) {
+  .home-image-container {
+    width: 55% !important;
+    margin-left: -1.5%;
+  }
+}
+
+@media(max-width:900px) {
+  .home-image-container {
+    width: 60% !important;
+    margin-left: -5%;
+  }
+}
+
+@media(max-width: 750px) {
+  .home-image-container {
+    width: 70% !important;
+    margin-left: -10%;
+  }
+}
+
+@media(max-width: 700px) {
+  .home-page-container {
+    margin-top: -10px;
+  }
+}
