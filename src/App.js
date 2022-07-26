@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import EventCreated from './Components/EventCreated';
 import EventDisplay from './Components/EventDisplay';
 import DisplayAttendees from './Components/DisplayAttendees';
-import HomePage from './Components/Header';
+import Header from './Components/Header';
 
 function App() {
   return (
