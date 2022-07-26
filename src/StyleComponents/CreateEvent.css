@@ -202,15 +202,17 @@ input[type=date] {
 input[type=time] {
   background-color: white;
   -webkit-appearance: none;
+  height: 20px;
 }
 
 input {
   -webkit-appearance: none;
+  height: 20px;
 }
 
 @media(max-width:590px) {
     .event-creation-container h1 {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       padding: 10px;
     }
 }
