@@ -194,12 +194,6 @@ span {
   }
 }
 
-@media(max-width: 580px) {
-  .upload-image-flex-container {
-    flex-direction: column;
-  }
-}
-
 input[type=date] {
   background-color: white;
   -webkit-appearance: none;
@@ -213,3 +207,16 @@ input[type=time] {
 input {
   -webkit-appearance: none;
 }
+
+@media(max-width:590px) {
+    .event-creation-container h1 {
+      font-size: 1.3rem;
+    }
+}
+
+@media(max-width: 580px) {
+  .upload-image-flex-container {
+    flex-direction: column;
+  }
+}
+
