@@ -52,22 +52,27 @@
   .home-page-container {
     flex-direction: column;
     margin-left: 20%;
+    margin-top: -30px;
   }
   .home-image-container {
-    width: 85% !important;
+    width: 50% !important;
   }
   .home-box-container {
-    display: flex;
+    margin-top: 60px;
   }
   .home-text-container {
-    margin-top: -70px;
-    width: 50%;
+    margin-top: -80px;
+    margin-left: -90%;
+  }
+  .home-text-container p {
+    font-size: 1.25rem;
   }
   .home-button-container {
     width: 50%;
+    margin-left: -20%;
   }
   .home-page-container {
     width: 100% !important;
-    margin-left: 20px !important;
+    margin-left: 25% !important;
   }
 }
