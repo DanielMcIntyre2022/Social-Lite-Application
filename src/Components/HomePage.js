@@ -15,7 +15,9 @@ function HomePage() {
     <>
       < Header />
       <div className='home-page-container'>
-    <img className='home_jpg' src={Social} alt="Friends Main" />
+        <div className="home-image-container">
+          <img className='home_jpg' src={Social} alt="Friends Main" />
+        </div>
         <div className='home-box-container'>
           <div className="home-text-container">
             <p>Easily <b>create, view and share</b> events with your friends!</p>

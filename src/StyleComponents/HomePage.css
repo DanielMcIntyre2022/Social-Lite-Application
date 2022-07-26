@@ -10,7 +10,7 @@
 }
 
 .home-page-container img {
-  width: 55%;
+  width: 100%;
 }
 
 .home-box {
@@ -46,4 +46,28 @@
   border-radius: 10px;
   padding: 10px;
   font-size: 1.2rem;
+}
+
+@media(max-width: 1200px) {
+  .home-page-container {
+    flex-direction: column;
+    margin-left: 20%;
+  }
+  .home-image-container {
+    width: 85% !important;
+  }
+  .home-box-container {
+    display: flex;
+  }
+  .home-text-container {
+    margin-top: -70px;
+    width: 50%;
+  }
+  .home-button-container {
+    width: 50%;
+  }
+  .home-page-container {
+    width: 100% !important;
+    margin-left: 20px !important;
+  }
 }
