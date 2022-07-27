@@ -2,7 +2,8 @@
   display: flex;
   margin-left: 100px;
   margin-right: 100px;
-  margin-top: 20px;
+  margin-top: -20px;
+
 }
 
 .home_jpg {
