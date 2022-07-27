@@ -14,10 +14,17 @@
     text-align: left;
 }
 
+.rsvp-display-container {
+    min-width: 200px;
+    width: auto;
+}
+
 .rsvp-display-container ol {
-    border: 1px solid black;
-    width: 20%;
-    margin: 0 auto;
+    border: 1px solid #B8B8B8;
+    border-radius: 10px;
+    width: auto;
+    /* min-width: 200px;
+    margin: 0 auto; */
     padding-left: 10%;
     padding-top: 10px;
     padding-bottom: 10px;

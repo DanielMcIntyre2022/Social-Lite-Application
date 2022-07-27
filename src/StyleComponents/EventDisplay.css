@@ -18,13 +18,16 @@
         border-right: 2px solid black;
         border-left: 2px solid black;
         border-bottom: 4px solid black;
+        width: 50%;
+        min-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 20px;
 }
 
 .event-image-container img {
     height: 35vh;
     border-radius: 10px;
-    width: 165%;
-    margin-left: -35%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -32,8 +35,12 @@
     display: flex;
     margin-top: 10px;
     font-size: 1.3rem;
-    justify-content: space-between;
-    margin-left: -15%;
+    width: 100%;
+    text-align: center;
+}
+
+.event-date-time-duration p {
+    width: 33%;
 }
 
 
@@ -68,9 +75,8 @@
 }
 
 .event-title-container {
-    width: 60%;
+    width: 100%;
     margin-top: 15px;
-    margin-left: 5%;
 }
 
 .event-title-and-image {
