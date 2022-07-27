@@ -24,11 +24,15 @@
         margin-bottom: 20px;
 }
 
+.event-image-container {
+    display: flex;
+    justify-content: center;
+}
+
 .event-image-container img {
-    height: 35vh;
     border-radius: 10px;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .event-date-time-duration {
