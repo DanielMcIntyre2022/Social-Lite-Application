@@ -4,14 +4,14 @@
 
 .rsvp-display-container h3 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.3rem;
     text-decoration: underline;
 }
 
 .attendees-container li {
-    font-size: 1.5rem;
     padding: 4px;
     text-align: left;
+    font-size: 1.3rem;
 }
 
 .rsvp-display-container {
@@ -24,9 +24,10 @@
     border: 1px solid #B8B8B8;
     border-radius: 10px;
     width: auto;
-    display: inline-block;
+    display: table;
     padding-left: 10%;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 100px;
+    margin: 0 auto;
 }
