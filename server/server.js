@@ -27,8 +27,8 @@ app.post("/", cors(corsOptions), (req, res) => {
   const msg = {
     to: emailInfo,
     from: "socialliteeventservices@gmail.com",
-    subject: "Your social lite event link has been created! ",
-    html: `<p>Hello, your event link can be found here: <a href="${eventInfo}">link</a></p>`,
+    subject: "Your sociallite event link has been created! ",
+    html: `<p>Your event link can be found here: <a href="${eventInfo}"></a></p>`,
   };
   
   sgMail.send(msg).then(() => {
