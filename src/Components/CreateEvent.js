@@ -92,7 +92,7 @@ function CreateEvent() {
                 EventDetails: detailsUserInput,
             });
             const getEmailInput = () => {
-                axios.post(serverUrl, { email: emailUserInput, eventLink:`http://soicalite.netlify.app/EventDisplay/${uuid}`}, {
+                axios.post(serverUrl, { email: emailUserInput, eventLink:`soicalite.netlify.app/EventDisplay/${uuid}`}, {
                     headers: {"Content-Type": "application/json",
                 },
         }).then((res) => {
